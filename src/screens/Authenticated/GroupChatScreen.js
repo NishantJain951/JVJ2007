@@ -677,13 +677,13 @@ const styles = StyleSheet.create({
     borderTopColor: '#ffd54f',
   },
   editLabel: { fontSize: 12, color: '#666', marginBottom: 6 },
-  editInputContainer: { flexDirection: 'row', alignItems: "flex-end" },
+  editInputContainer: { flexDirection: 'row', alignItems: 'flex-end' },
 
   editButtonRow: {
-  flexDirection: 'row',
-  justifyContent: 'flex-end',
-  // marginTop: 8,
-},
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    // marginTop: 8,
+  },
 
   editInput: {
     flex: 1,
