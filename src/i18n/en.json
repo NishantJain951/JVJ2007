@@ -26,7 +26,7 @@
   },
   "resetPassword": "Reset Password",
   "rememberedPassword": "Password remembered?",
-    "home": {
+  "home": {
     "title": "Home",
     "reunionTitle": "JVJ 2007 - 10th Batch",
     "subtitle": "Get Together",
@@ -34,41 +34,42 @@
     "time": "⏰ 10:00 AM - 4:30 PM",
     "location": "📍 Janta Vidyalaya, Jamod",
     "galleryButton": "🖼️ Watch All Event Photos",
-    "galleryButtonSub": "View Event Gallery",
+    "galleryButtonSub": "View Docs and Info",
     "memoryQuote": "“We didn’t realize we were making memories.”",
     "memoryQuoteSub": "We just knew we were having fun",
     "countdownMessage": "✨ It’s Not Just a Reunion — It’s a Return to Where It All Began!",
     "formButton": "FILL GET-TOGETHER FORM",
     "formButtonSub": "गेट-टुगेदर फॉर्म भरा",
     "formInfo": "✍️ Let’s prepare for the reunion! Filling this form helps us plan and ensure everyone can join.",
-    "thankYouMessage": "🎉 This reunion wouldn’t have been possible without you!",
+    "thankYouMessage": "✨These memories will live forever!✨ \n\nWith everyone's presence, \ntoday turned out to be a joyful day — \nfilled with laughter, fun, \nand endless chats about old memories. \nTime just flew by without us even realizing it! \n\nThis reunion after 18 years \nhas truly been unforgettable. \n\nHeartfelt thanks to everyone for being a part of it!\n",
+    "thankYouMessage2": "🎉 This reunion wouldn’t have been possible without you!",
     "friendReminder": "💬 Tag your school bestie and let’s make this reunion unforgettable!"
   },
-    "contactUs": {
+  "contactUs": {
     "title": "Contact Us",
     "introTitle": "Get in Touch",
     "introDesc": "Have questions or want to connect with us? Reach out anytime through email or join our official WhatsApp group for updates and discussions.",
-    
+
     "officialSupportTitle": "Official Support",
     "emailButton": "📧 Click here to email",
     "callButton": "📞 Call",
     "whatsappButton": "💬 WhatsApp Chat",
-    
+
     "whatsappGroupTitle": "Our WhatsApp Group",
     "whatsappGroupButton": "💬 Chat on Our WhatsApp Group",
-    
+
     "developersTitle": "Developers",
     "developer1Name": "👨‍💻 Amol Dhage",
     "developer1Role": "iOS Developer | Mobile App & Software Developer",
     "developer1Call": "📞 9890332831",
     "developer1WhatsApp": "💬 WhatsApp Chat",
     "developer1Email": "📧 Email: amoltdhage@gmail.com",
-    
+
     "developer2Name": "👨‍💻 Nishant Jain",
     "developer2Role": "Mobile App Developer | Database Developer",
     "developer2Email": "📧 Email: nishantjain951@gmail.com"
   },
-   "getTogether": {
+  "getTogether": {
     "headerTitle": "Get-Together Form",
     "attendingTitle": "Are you attending?",
     "registerAnotherTitle": "Register Another",
@@ -92,7 +93,9 @@
       "comments": "Comments (Optional)"
     },
     "ChildrenDetails": "Children Details",
-    "childName" : "Child Name",
+    "children": "Children",
+    "dob": "Date of Birth",
+    "childName": "Child Name",
     "age": "Age"
   },
   "about": {
@@ -102,11 +105,11 @@
     "description": {
       "intro": "This app is designed and developed for the JVJ 2007 10th Batch Reunion.",
       "eventDetails": "📅 Date: Saturday, 25th October 2025\n🕙 Time: 10:00 AM to 4:30 PM\n🏫 Venue: Janta Vidyalaya, Jamod",
-      "invite": "All 10th batchmates are warmly invited to reconnect, celebrate, and relive our school memories with our beloved teachers and staff.",
+      "invite": "All 10th batchmates are warmly invited to reconnect, celebrate, and relive our school memories with our beloved teachers and\nstaff.",
       "purpose": "This app keeps you informed about the event schedule, attendees, and updates so that we all stay connected."
     }
   },
-   "profile": {
+  "profile": {
     "headerTitle": "Profile",
     "sections": {
       "myProfile": "My Profile",
@@ -121,7 +124,7 @@
       "Contact": "Contact",
       "Village": "Village",
       "Country": "Country",
-      "Attending": "attending",
+      "Attending": "Attending",
       "Children": "Children",
       "totalPersons": "Total Persons"
     },
@@ -147,5 +150,9 @@
     }
   },
   "bondReconnect": "Let's reconnect, relive memories, and celebrate our school bond!",
-  "viewEventPdf": "View Event Pass PDF"
+  "viewEventPdf": "View Event Pass PDF",
+  "registerAnother": "Register Another",
+  "missYouMessage": "Thank you for your response! We’ll miss you at the event.",
+  "goBackToForm": "Go back to the form",
+  "close": "क्लोज़"
 }

@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 16,
     textAlign: 'center',
+    width: "100%"
   },
   highlight: {
     color: '#1D3557',
@@ -119,5 +120,6 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: '600',
+    width: "100%"
   },
 });

@@ -507,7 +507,7 @@ const ProfileScreen = () => {
           userDetail?.mobile || t('profile.placeholders.noData'),
         [t('profile.fields.Village')]:
           userDetail?.village || t('profile.placeholders.noData'),
-        [t('profile.fields.Country')]: t('profile.fields.Country'),
+        [t('profile.fields.Country')]: userDetail?.country || "India",
       },
     };
     setProfileData(newProfileData);

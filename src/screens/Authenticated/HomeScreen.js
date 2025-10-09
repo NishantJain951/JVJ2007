@@ -511,8 +511,6 @@ import CountdownTimer from '../../components/CountdownTimer';
 import Header from '../../components/Header';
 import { useTranslation } from 'react-i18next';
 
-const { width } = Dimensions.get('window');
-
 const HomeScreen = ({ navigation }) => {
   const { t } = useTranslation();
 
@@ -672,18 +670,16 @@ const HomeScreen = ({ navigation }) => {
                 </TouchableOpacity>
               </View>
 
-              <Text style={styles.formInfo}>
-                {t('home.formInfo')}
-              </Text>
+              <Text style={styles.formInfo}>{t('home.formInfo')}</Text>
             </>
           )}
         </View>
 
         {/* Thank You Message */}
-        {isEventPast && (
+        {/* {isEventPast && ( */}
           <View style={styles.countdownBox}>
             <Text style={[styles.countdownTitle, { textAlign: 'center' }]}>
-              {t('home.thankYouMessage')}
+              {t('home.thankYouMessage2')}
             </Text>
             <Text
               style={[
@@ -696,14 +692,14 @@ const HomeScreen = ({ navigation }) => {
               ]}
               onPress={() =>
                 Linking.openURL(
-                  'https://drive.google.com/drive/folders/1zXbITy24O8ZAmOiPQ-sL7pWNo7wPlQGE?usp=drive_link',
+                  'https://drive.google.com/drive/folders/1M6gCliTxhZlHXnGqbAgG-2C_Tjs65rvn?usp=drive_link',
                 )
               }
             >
               {t('home.galleryButtonSub')}
             </Text>
           </View>
-        )}
+        {/* )} */}
 
         {/* Friend Reminder */}
         <View style={styles.friendBox}>
@@ -733,6 +729,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
     textAlign: 'center',
+    width: '100%',
   },
   subtitle: {
     fontSize: 14,
@@ -740,13 +737,20 @@ const styles = StyleSheet.create({
     color: '#cce6ff',
     marginBottom: 10,
     textAlign: 'center',
+    width: '100%',
   },
-  detailBox: { alignSelf: 'center', marginTop: 10, paddingLeft: 5 },
+  detailBox: {
+    alignSelf: 'center',
+    marginTop: 10,
+    paddingLeft: 5,
+    width: '100%',
+  },
   detail: {
     color: '#e0ecff',
     fontSize: 14,
     marginVertical: 2,
-    textAlign: 'left',
+    width: '100%',
+    textAlign: 'center',
   },
   memoryCard: {
     backgroundColor: '#FFF8E1',

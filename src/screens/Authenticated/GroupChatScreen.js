@@ -375,7 +375,7 @@ export default function GroupChatScreen() {
   if (loading) {
     return (
       <>
-        <Header title="Group chat" />
+        <Header title="Group chat" hideDropdown={true} />
         <View style={styles.loadingContainer}>
           <ActivityIndicator size="large" color="#2d677aff" />
           <Text style={styles.loadingText}>Loading messages...</Text>
@@ -386,7 +386,7 @@ export default function GroupChatScreen() {
 
   return (
     <>
-      <Header title="Group chat" />
+      <Header title="Group chat" hideDropdown={true} />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}

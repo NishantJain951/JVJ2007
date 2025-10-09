@@ -16,7 +16,7 @@ export default function ChildrenInput({
   return (
     <>
       <View style={styles.inputWrapper}>
-        <Text style={styles.label}>Children</Text>
+        <Text style={styles.label}>{t("getTogether.children")}</Text>
         <View style={styles.inputContainer}>
           <MaterialIcon name="family-restroom" size={20} style={styles.icon} />
           <Picker

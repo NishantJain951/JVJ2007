@@ -142,7 +142,7 @@ export const GetTogetherFormStyles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     marginTop: 4,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   pdfButton: {
     backgroundColor: '#00b4db',

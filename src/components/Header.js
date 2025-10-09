@@ -115,7 +115,6 @@
 //   },
 // });
 
-
 import React, { useState } from 'react';
 import {
   View,
@@ -129,7 +128,11 @@ import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
-export default function Header({ title, showBack = false }) {
+export default function Header({
+  title,
+  showBack = false,
+  hideDropdown = false,
+}) {
   const navigation = useNavigation();
   const { i18n } = useTranslation();
 
@@ -139,7 +142,7 @@ export default function Header({ title, showBack = false }) {
     { label: 'English', value: 'en' },
   ];
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = lang => {
     i18n.changeLanguage(lang);
     setModalVisible(false);
   };
@@ -148,11 +151,17 @@ export default function Header({ title, showBack = false }) {
     <View style={styles.header}>
       {/* Back or Menu */}
       {showBack ? (
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.leftBtn}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.leftBtn}
+        >
           <MaterialIcon name="arrow-back" size={26} color="#fff" />
         </TouchableOpacity>
       ) : (
-        <TouchableOpacity onPress={() => navigation.openDrawer()} style={styles.leftBtn}>
+        <TouchableOpacity
+          onPress={() => navigation.openDrawer()}
+          style={styles.leftBtn}
+        >
           <Text style={styles.btnText}>☰</Text>
         </TouchableOpacity>
       )}
@@ -161,41 +170,43 @@ export default function Header({ title, showBack = false }) {
       <Text style={styles.title}>{title}</Text>
 
       {/* Language Button */}
-      <TouchableOpacity
+      {!hideDropdown ? <TouchableOpacity
         style={styles.langBtn}
         onPress={() => setModalVisible(true)}
       >
         <Text style={styles.langBtnText}>
           {i18n.language === 'en' ? 'English' : 'मराठी'}
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> : null}
 
       {/* Language Selection Modal */}
-      <Modal
-        visible={modalVisible}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setModalVisible(false)}
-      >
-        <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
-          <View style={styles.modalOverlay}>
-            <TouchableWithoutFeedback>
-              <View style={styles.modalContent}>
-                <Text style={styles.modalTitle}>Select Language / भाषा निवडा</Text>
-                {languages.map((lang, idx) => (
-                  <TouchableOpacity
-                    key={idx}
-                    style={styles.langOption}
-                    onPress={() => changeLanguage(lang.value)}
-                  >
-                    <Text style={styles.langOptionText}>{lang.label}</Text>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </TouchableWithoutFeedback>
-          </View>
-        </TouchableWithoutFeedback>
-      </Modal>
+        <Modal
+          visible={modalVisible}
+          transparent
+          animationType="fade"
+          onRequestClose={() => setModalVisible(false)}
+        >
+          <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
+            <View style={styles.modalOverlay}>
+              <TouchableWithoutFeedback>
+                <View style={styles.modalContent}>
+                  <Text style={styles.modalTitle}>
+                    Select Language / भाषा निवडा
+                  </Text>
+                  {languages.map((lang, idx) => (
+                    <TouchableOpacity
+                      key={idx}
+                      style={styles.langOption}
+                      onPress={() => changeLanguage(lang.value)}
+                    >
+                      <Text style={styles.langOptionText}>{lang.label}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </View>
+              </TouchableWithoutFeedback>
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
     </View>
   );
 }
@@ -212,7 +223,13 @@ const styles = StyleSheet.create({
   },
   leftBtn: { padding: 8 },
   btnText: { color: '#fff', fontSize: 20, fontWeight: 'bold' },
-  title: { flex: 1, color: '#fff', fontSize: 18, fontWeight: 'bold', textAlign: 'center' },
+  title: {
+    flex: 1,
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
   langBtn: { padding: 8, backgroundColor: '#0055a0', borderRadius: 6 },
   langBtnText: { color: '#fff', fontWeight: 'bold' },
 
@@ -227,7 +244,12 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
   },
-  modalTitle: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginBottom: 10 },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
   langOption: {
     paddingVertical: 20,
     alignItems: 'center',
