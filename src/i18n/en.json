@@ -1,0 +1,151 @@
+{
+  "login": {
+    "title": "JVJ Reconnect",
+    "batch": "2007 Batch",
+    "login": "Login",
+    "emailPlaceholder": "Email Address",
+    "passwordPlaceholder": "Password",
+    "forgotPassword": "Forgot your password?",
+    "reset": "Reset",
+    "noAccount": "Don’t have an account?",
+    "signUp": "Sign Up",
+    "warning": "Note: If you are using the app for the first time, create your account by clicking below on 'Sign Up'."
+  },
+  "signup": {
+    "title": "Create Account",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "mobile": "Mobile Number",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "button": "Sign Up",
+    "haveAccount": "Already have an account?",
+    "login": "Login",
+    "selectLanguage": "Select Language / भाषा निवडा"
+  },
+  "resetPassword": "Reset Password",
+  "rememberedPassword": "Password remembered?",
+    "home": {
+    "title": "Home",
+    "reunionTitle": "JVJ 2007 - 10th Batch",
+    "subtitle": "Get Together",
+    "date": "📅 25th October 2025, Saturday",
+    "time": "⏰ 10:00 AM - 4:30 PM",
+    "location": "📍 Janta Vidyalaya, Jamod",
+    "galleryButton": "🖼️ Watch All Event Photos",
+    "galleryButtonSub": "View Event Gallery",
+    "memoryQuote": "“We didn’t realize we were making memories.”",
+    "memoryQuoteSub": "We just knew we were having fun",
+    "countdownMessage": "✨ It’s Not Just a Reunion — It’s a Return to Where It All Began!",
+    "formButton": "FILL GET-TOGETHER FORM",
+    "formButtonSub": "गेट-टुगेदर फॉर्म भरा",
+    "formInfo": "✍️ Let’s prepare for the reunion! Filling this form helps us plan and ensure everyone can join.",
+    "thankYouMessage": "🎉 This reunion wouldn’t have been possible without you!",
+    "friendReminder": "💬 Tag your school bestie and let’s make this reunion unforgettable!"
+  },
+    "contactUs": {
+    "title": "Contact Us",
+    "introTitle": "Get in Touch",
+    "introDesc": "Have questions or want to connect with us? Reach out anytime through email or join our official WhatsApp group for updates and discussions.",
+    
+    "officialSupportTitle": "Official Support",
+    "emailButton": "📧 Click here to email",
+    "callButton": "📞 Call",
+    "whatsappButton": "💬 WhatsApp Chat",
+    
+    "whatsappGroupTitle": "Our WhatsApp Group",
+    "whatsappGroupButton": "💬 Chat on Our WhatsApp Group",
+    
+    "developersTitle": "Developers",
+    "developer1Name": "👨‍💻 Amol Dhage",
+    "developer1Role": "iOS Developer | Mobile App & Software Developer",
+    "developer1Call": "📞 9890332831",
+    "developer1WhatsApp": "💬 WhatsApp Chat",
+    "developer1Email": "📧 Email: amoltdhage@gmail.com",
+    
+    "developer2Name": "👨‍💻 Nishant Jain",
+    "developer2Role": "Mobile App Developer | Database Developer",
+    "developer2Email": "📧 Email: nishantjain951@gmail.com"
+  },
+   "getTogether": {
+    "headerTitle": "Get-Together Form",
+    "attendingTitle": "Are you attending?",
+    "registerAnotherTitle": "Register Another",
+    "yes": "Yes",
+    "no": "No",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "sessionExpired": "Session expired. Please login again.",
+    "notAbleToFetchData": "Not able to get your data. Please login again.",
+    "alertTitle": "Please fix errors",
+    "alertDesc": "Complete required fields highlighted in red.",
+    "alertAddChildTitle": "Please add {{count}} {{count > 1 ? 'children' : 'child'}}",
+    "alertAddChildDesc": "You have mentioned children count as {{count}}",
+    "fields": {
+      "fullName": "Full Name",
+      "gender": "Gender",
+      "female": "Female",
+      "male": "Male",
+      "mobile": "Mobile Number",
+      "village": "Village / City",
+      "comments": "Comments (Optional)"
+    },
+    "ChildrenDetails": "Children Details",
+    "childName" : "Child Name",
+    "age": "Age"
+  },
+  "about": {
+    "headerTitle": "About Us",
+    "appTitle": "JVJ 2007 Reconnect",
+    "subtitle": "10th Batch Get-Together",
+    "description": {
+      "intro": "This app is designed and developed for the JVJ 2007 10th Batch Reunion.",
+      "eventDetails": "📅 Date: Saturday, 25th October 2025\n🕙 Time: 10:00 AM to 4:30 PM\n🏫 Venue: Janta Vidyalaya, Jamod",
+      "invite": "All 10th batchmates are warmly invited to reconnect, celebrate, and relive our school memories with our beloved teachers and staff.",
+      "purpose": "This app keeps you informed about the event schedule, attendees, and updates so that we all stay connected."
+    }
+  },
+   "profile": {
+    "headerTitle": "Profile",
+    "sections": {
+      "myProfile": "My Profile",
+      "contactDetails": "Contact Details"
+    },
+    "fields": {
+      "Name": "Name",
+      "DOB": "DOB",
+      "Gender": "Gender",
+      "Payment": "Payment",
+      "Email": "Email",
+      "Contact": "Contact",
+      "Village": "Village",
+      "Country": "Country",
+      "Attending": "attending",
+      "Children": "Children",
+      "totalPersons": "Total Persons"
+    },
+    "buttons": {
+      "editImage": "Edit",
+      "logout": "Logout",
+      "successUpdateImage": "Profile photo updated successfully",
+      "failedUpdateImage": "Failed to update profile image",
+      "failedSelectImage": "Failed to select image"
+    },
+    "placeholders": {
+      "initial": "A",
+      "noData": "-"
+    },
+    "alerts": {
+      "logoutTitle": "Logout",
+      "logoutMessage": "Are you sure you want to logout?",
+      "cancel": "Cancel",
+      "logout": "Logout"
+    },
+    "loading": {
+      "loadingProfile": "Loading Profile Data..."
+    }
+  },
+  "bondReconnect": "Let's reconnect, relive memories, and celebrate our school bond!",
+  "viewEventPdf": "View Event Pass PDF"
+}

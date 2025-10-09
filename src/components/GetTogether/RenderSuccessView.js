@@ -9,14 +9,17 @@ import { updateCollection } from '../../Services/firestoreServices';
 import { EVENT_INFO } from '../../utils/utils';
 import NotAttendingComponent from './NotAttendingComponent';
 import { formatRegId } from '../../Services/FormatRegnId';
+import { useTranslation } from 'react-i18next';
 
 export default function RenderSuccessView({
   userDetail,
   styles,
   getUserData,
   setOpenAllowForm,
+  setErrors
 }) {
   const auth = useSelector(state => state.auth);
+  const { t } = useTranslation();
 
   const resetForm = async () => {
     await updateCollection('users', auth.user, { attending: '' });
@@ -110,34 +113,34 @@ export default function RenderSuccessView({
 
               <View style={{ marginTop: 12 }}>
                 <Text style={styles.infoText}>
-                  <Text style={{ fontWeight: '700' }}>Name:</Text>{' '}
+                  <Text style={{ fontWeight: '700' }}>{t('profile.fields.Name')}:</Text>{' '}
                   {userDetail?.fullName ||
                     userDetail?.firstName + ' ' + userDetail?.lastName}
                 </Text>
                 <Text style={styles.infoText}>
-                  <Text style={{ fontWeight: '700' }}>DOB:</Text>{' '}
+                  <Text style={{ fontWeight: '700' }}>{t('profile.fields.DOB')}:</Text>{' '}
                   {new Date(userDetail?.dob).toLocaleDateString('en-GB')}
                 </Text>
                 <Text style={styles.infoText}>
-                  <Text style={{ fontWeight: '700' }}>Mobile:</Text>{' '}
+                  <Text style={{ fontWeight: '700' }}>{t('signup.mobile')}:</Text>{' '}
                   {userDetail?.mobile}
                 </Text>
                 <Text style={styles.infoText}>
-                  <Text style={{ fontWeight: '700' }}>Village/City:</Text>{' '}
+                  <Text style={{ fontWeight: '700' }}>{t('profile.fields.Village')}:</Text>{' '}
                   {userDetail?.village}
                 </Text>
                 <Text style={styles.infoText}>
-                  <Text style={{ fontWeight: '700' }}>Attending:</Text>{' '}
+                  <Text style={{ fontWeight: '700' }}>{t('profile.fields.Attending')}:</Text>{' '}
                   {userDetail?.attending === true ? 'Yes' : 'No'}
                 </Text>
                 {userDetail?.children?.length ? (
                   <Text style={styles.infoText}>
-                    <Text style={{ fontWeight: '700' }}>Children:</Text>{' '}
+                    <Text style={{ fontWeight: '700' }}>{t('profile.fields.Children')}:</Text>{' '}
                     {userDetail?.children?.length}
                   </Text>
                 ) : null}
                 <Text style={styles.infoText}>
-                  <Text style={{ fontWeight: '700' }}>Total persons:</Text>{' '}
+                  <Text style={{ fontWeight: '700' }}>{t("profile.fields.totalPersons")}:</Text>{' '}
                   {1 + Number(userDetail?.childrenCount)}
                 </Text>
               </View>
@@ -145,11 +148,11 @@ export default function RenderSuccessView({
               {userDetail?.children?.length > 0 && (
                 <View style={{ marginTop: 10 }}>
                   <Text style={{ fontWeight: '700', color: '#fff' }}>
-                    Children Details:
+                    t{"getTogether.ChildrenDetails"}:
                   </Text>
                   {userDetail?.children.map((c, i) => (
                     <Text key={i} style={styles.infoText}>
-                      • {c.name} — age {c.age}
+                      • {c.name} — {t("getTogether.age")} {c.age}
                     </Text>
                   ))}
                 </View>
@@ -163,8 +166,7 @@ export default function RenderSuccessView({
                     textAlign: 'center',
                   }}
                 >
-                  Let's reconnect, relive memories, and celebrate our school
-                  bond!
+                  {t("bondReconnect")}
                 </Text>
               </View>
               <View style={{ marginTop: 16, width: '100%' }}>
@@ -172,7 +174,7 @@ export default function RenderSuccessView({
                   style={styles.pdfButton}
                   onPress={() => handleDownloadPDF('view')}
                 >
-                  <Text style={styles.pdfButtonText}>View PDF</Text>
+                  <Text style={styles.pdfButtonText}>{t("viewEventPdf")}</Text>
                 </TouchableOpacity>
                 {userDetail?.isAllowAnother === true && !userDetail?.users ? (
                   <TouchableOpacity
@@ -214,34 +216,34 @@ export default function RenderSuccessView({
 
                 <View style={{ marginTop: 12 }}>
                   <Text style={styles.infoText}>
-                    <Text style={{ fontWeight: '700' }}>Name:</Text>{' '}
+                    <Text style={{ fontWeight: '700' }}>{t('profile.fields.Name')}:</Text>{' '}
                     {userDetail?.users?.fullName ||
                       userDetail?.users?.firstName +
                         ' ' +
                         userDetail?.users?.lastName}
                   </Text>
                   <Text style={styles.infoText}>
-                    <Text style={{ fontWeight: '700' }}>DOB:</Text>{' '}
+                    <Text style={{ fontWeight: '700' }}>{t('profile.fields.DOB')}:</Text>{' '}
                     {new Date(userDetail?.users?.dob).toLocaleDateString(
                       'en-GB',
                     )}
                   </Text>
                   <Text style={styles.infoText}>
-                    <Text style={{ fontWeight: '700' }}>Mobile:</Text>{' '}
+                    <Text style={{ fontWeight: '700' }}>{t('signup.mobile')}:</Text>{' '}
                     {userDetail?.users?.mobile || userDetail?.mobile}
                   </Text>
                   <Text style={styles.infoText}>
-                    <Text style={{ fontWeight: '700' }}>Village/City:</Text>{' '}
+                    <Text style={{ fontWeight: '700' }}>{t('profile.fields.Village')}:</Text>{' '}
                     {userDetail?.users?.village}
                   </Text>
                   {userDetail?.users?.children?.length ? (
                     <Text style={styles.infoText}>
-                      <Text style={{ fontWeight: '700' }}>Children:</Text>{' '}
+                      <Text style={{ fontWeight: '700' }}>{t('profile.fields.Children')}:</Text>{' '}
                       {userDetail?.users?.children?.length}
                     </Text>
                   ) : null}
                   <Text style={styles.infoText}>
-                    <Text style={{ fontWeight: '700' }}>Total persons:</Text>{' '}
+                    <Text style={{ fontWeight: '700' }}>{t("profile.fields.totalPersons")}:</Text>{' '}
                     {1 + Number(userDetail?.users?.childrenCount)}
                   </Text>
                 </View>
@@ -249,11 +251,11 @@ export default function RenderSuccessView({
                 {userDetail?.users?.children?.length > 0 && (
                   <View style={{ marginTop: 10 }}>
                     <Text style={{ fontWeight: '700', color: '#fff' }}>
-                      Children Details:
+                      t{"getTogether.ChildrenDetails"}:
                     </Text>
                     {userDetail?.users?.children.map((c, i) => (
                       <Text key={i} style={styles.infoText}>
-                        • {c.name} — age {c.age}
+                        • {c.name} — {t("getTogether.age")} {c.age}
                       </Text>
                     ))}
                   </View>
@@ -267,8 +269,7 @@ export default function RenderSuccessView({
                       textAlign: 'center',
                     }}
                   >
-                    Let's reconnect, relive memories, and celebrate our school
-                    bond!
+                    {t("bondReconnect")}
                   </Text>
                 </View>
                 <View style={{ marginTop: 16, width: '100%' }}>
@@ -276,7 +277,7 @@ export default function RenderSuccessView({
                     style={styles.pdfButton}
                     onPress={() => handleDownloadPDF('view', userDetail?.users)}
                   >
-                    <Text style={styles.pdfButtonText}>View PDF</Text>
+                    <Text style={styles.pdfButtonText}>{t("viewEventPdf")}</Text>
                   </TouchableOpacity>
                 </View>
               </View>
