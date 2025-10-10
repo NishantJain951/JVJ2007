@@ -140,33 +140,49 @@ export default function ResetPassword() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  // container: {
+  //   flexGrow: 1,
+  //   backgroundColor: '#121212',
+  //   alignItems: 'center',
+  //   paddingVertical: 120,
+  //   paddingHorizontal: 20,
+  //   height: '100%',
+  // },
+
+    container: {
     flexGrow: 1,
-    backgroundColor: '#121212',
+    backgroundColor: '#0d0d0d',
     alignItems: 'center',
-    paddingVertical: 120,
-    paddingHorizontal: 20,
-    height: '100%',
+    // justifyContent: 'center',
+    paddingHorizontal: '7%',
+    paddingVertical: 50,
   },
-  title: {
-    fontSize: 28,
+    title: {
+    fontSize: 23,
     color: '#00b4db',
-    fontWeight: 'bold',
+    fontWeight: '700',
     marginBottom: 25,
+  },
+  subtitle: {
+    fontSize: 18,
+    color: '#00b4db',
+    opacity: 0.8,
+    marginTop: 2,
+    fontWeight: "bold"
   },
   inputWrapper: {
     width: '100%',
-    marginBottom: 10,
+    marginTop: 12,
   },
   inputContainer: {
     flexDirection: 'row',
-    backgroundColor: '#1e1e1e',
-    borderRadius: 12,
-    padding: 14,
     alignItems: 'center',
-    borderWidth: 1.3,
-    borderColor: '#00b4db',
-    borderColor: '#004e66', // darker shade of blue
+    backgroundColor: '#161616',
+    borderRadius: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: '#004e6655',
   },
   icon: {
     color: '#00b4db',
@@ -185,10 +201,9 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '100%',
-    marginVertical: 20,
-    borderRadius: 12,
+    marginVertical: 15,
+    borderRadius: 10,
     overflow: 'hidden',
-    elevation: 3,
   },
   gradient: {
     paddingVertical: 14,
@@ -196,8 +211,8 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 16,
+    fontWeight: '600',
   },
   loginText: {
     width: '100%',

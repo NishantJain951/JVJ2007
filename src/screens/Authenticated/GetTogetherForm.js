@@ -416,7 +416,7 @@ const GetTogetherForm = () => {
                   {isLoading ? (
                     <ActivityIndicator size="large" color="#f3f6f7ff" />
                   ) : (
-                    'Submit'
+                    t("getTogether.submit")
                   )}
                 </Text>
               </TouchableOpacity>
