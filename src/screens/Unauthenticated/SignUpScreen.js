@@ -144,12 +144,7 @@ const SignUpScreen = ({ navigation }) => {
   }, []);
 
   return (
-    // <KeyboardAvoidingView
-    //   behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-    //   keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : -30}
-    //   style={{ flex: 1 }}
-    // >
-    <Animated.View style={{ flex: 1, paddingBottom: keyboardHeight }}>
+    <Animated.View style={{ flex: 1, paddingBottom: keyboardHeight - 1 }}>
       <ScrollView contentContainerStyle={styles.container}>
         <StatusBar barStyle="light-content" />
         <MaterialIcon
@@ -304,7 +299,6 @@ const SignUpScreen = ({ navigation }) => {
           </Text>
         </View>
       </ScrollView>
-      {/* </KeyboardAvoidingView> */}
     </Animated.View>
   );
 };
