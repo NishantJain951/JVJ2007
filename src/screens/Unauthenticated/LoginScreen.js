@@ -368,6 +368,10 @@ const LoginScreen = ({ navigation }) => {
   };
 
   useEffect(() => {
+    handleLanguageChange("mr");
+  }, [])
+  
+  useEffect(() => {
     passwordRef.current?.focus();
   }, []);
 

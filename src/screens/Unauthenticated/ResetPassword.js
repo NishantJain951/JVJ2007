@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -39,6 +39,10 @@ export default function ResetPassword() {
     i18n.changeLanguage(lang);
   };
 
+  useEffect(() => {
+    handleLanguageChange("en");
+  }, [])
+
   const handleChange = (name, value) => {
     setForm({ ...form, [name]: value });
     setErrors({ ...errors, [name]: '' }); // clear error as user types
@@ -78,7 +82,7 @@ export default function ResetPassword() {
       <Text style={styles.title}>{t('resetPassword')}</Text>
 
       {/* Language Dropdown */}
-      <View style={styles.languageSection}>
+      {/* <View style={styles.languageSection}>
         <Text style={styles.languageLabel}>Select Language / भाषा निवडा</Text>
         <DropDownPicker
           open={open}
@@ -95,7 +99,7 @@ export default function ResetPassword() {
           zIndexInverse={3000}
           arrowIconStyle={{ tintColor: '#00b4db' }}
         />
-      </View>
+      </View> */}
 
       <View style={styles.inputWrapper}>
         <View style={styles.inputContainer}>

@@ -733,8 +733,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: '#00b4db',
     fontWeight: '700',
-    marginTop: 15,
-    marginBottom: 25
+    marginTop: 5,
+    marginBottom: 30
   },
   inputWrapper: {
     width: '100%',
@@ -782,12 +782,13 @@ const styles = StyleSheet.create({
   inlineTextContainer: {
     marginTop: 10,
     marginBottom: 30,
+    width: "100%"
   },
   loginText: {
     color: '#aaa',
     fontSize: 14,
     textAlign: 'center',
-    width: '100%',
+    // width: '100%',
   },
   linkText: {
     color: '#00b4db',
