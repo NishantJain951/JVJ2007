@@ -198,7 +198,7 @@ export default function RenderSuccessView({
               {userDetail?.children?.length > 0 && (
                 <View style={{ marginTop: 10 }}>
                   <Text style={{ fontWeight: '700', color: '#fff' }}>
-                    t{'getTogether.ChildrenDetails'}:
+                    {t('getTogether.ChildrenDetails')}
                   </Text>
                   {userDetail?.children.map((c, i) => (
                     <Text key={i} style={styles.infoText}>
@@ -313,7 +313,7 @@ export default function RenderSuccessView({
                 {userDetail?.users?.children?.length > 0 && (
                   <View style={{ marginTop: 10 }}>
                     <Text style={{ fontWeight: '700', color: '#fff' }}>
-                      t{'getTogether.ChildrenDetails'}:
+                      {t('getTogether.ChildrenDetails')}
                     </Text>
                     {userDetail?.users?.children.map((c, i) => (
                       <Text key={i} style={styles.infoText}>
