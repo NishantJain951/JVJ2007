@@ -83,7 +83,7 @@ const CountdownTimer = () => {
               timeLeft.days === 0 ? styles.redText : styles.yellowText,
             ]}
           >
-            {!timeLeft?.days
+            {!timeLeft?.seconds && !timeLeft.minutes && !timeLeft.hours && !timeLeft.days
               ? 'Loading Countdown...'
               : `⏳ ${timeLeft.days ?? '--'}d : ${timeLeft.hours ?? '--'}h : ${
                   timeLeft.minutes ?? '--'
